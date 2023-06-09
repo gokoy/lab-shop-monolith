@@ -2,7 +2,7 @@ package labshopmonolith.infra;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import labshopmonolith.MonolithApplication;
+import labshopmonolith.InventoryApplication;
 import labshopmonolith.config.kafka.KafkaProcessor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.messaging.MessageChannel;
@@ -31,7 +31,7 @@ public class AbstractEvent {
         /**
          * spring streams 방식
          */
-        KafkaProcessor processor = MonolithApplication.applicationContext.getBean(
+        KafkaProcessor processor = InventoryApplication.applicationContext.getBean(
             KafkaProcessor.class
         );
         MessageChannel outputChannel = processor.outboundTopic();

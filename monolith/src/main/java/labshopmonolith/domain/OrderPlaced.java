@@ -21,6 +21,4 @@ public class OrderPlaced extends AbstractEvent {
     public OrderPlaced() {
         super();
     }
-    // keep
-
 }
